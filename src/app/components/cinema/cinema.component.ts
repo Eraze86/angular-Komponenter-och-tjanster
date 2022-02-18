@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from 'src/app/service/movie.service';
 
 @Component({
   selector: 'app-cinema',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CinemaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: MovieService) { }
 
   ngOnInit(): void {
   }
 
+  toggle(){
+    this.service.movieAnnouncement({title: "Star Wars - Rise of Skywalker", length:210})
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from 'src/app/service/movie.service';
 
 @Component({
   selector: 'app-visitor',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VisitorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: MovieService) { }
 
   ngOnInit(): void {
+   
   }
 
 }
